@@ -1,0 +1,106 @@
+.infobar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally and vertically */
+    font-size: 24px; 
+    height: 100%; /* Ensure it takes the full height of its parent container */
+}
+
+.info-label {
+    padding-right: 100px; /* Adjust the padding as needed */
+}
+
+.node-label {
+    padding-right: 100px; /* Adjust the padding as needed */
+    padding-left: 10px; /* Adjust the padding as needed */
+}
+
+.info-node-finish {
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    position: relative;
+}
+  
+.info-node-finish::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+  
+.info-node-finish::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 9px white
+}
+
+.info-node-start {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+  
+.info-node-start::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    border-left: 16px solid transparent; /* Adjust the size of the flag */
+    border-right: 16px solid transparent; /* Adjust the size of the flag */
+    border-bottom: 34px solid green; /* Adjust the size and color of the flag */
+    transform: rotate(90deg);
+}
+  
+.info-node-start::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 48px;
+    background-color: black;
+}
+
+.unvisited-node {
+    width: 40px;
+    height: 40px;
+    outline: 2.5px solid rgb(175, 216, 248);
+    display: inline-block;
+}
+
+.visited-node {
+    width: 40px;
+    height: 40px;
+    outline: 2.5px solid rgb(175, 216, 248);
+    display: inline-block;
+    background-color: rgba(0, 190, 218, 0.75);
+}
+
+.wall-node {
+    width: 40px;
+    height: 40px;
+    outline: 2.5px solid rgb(175, 216, 248);
+    display: inline-block;
+    background-color: rgb(12, 53, 71);
+}
+
+.shortest-path-node {
+    width: 40px;
+    height: 40px;
+    outline: 2.5px solid rgb(175, 216, 248);
+    display: inline-block;
+    background-color: rgb(255, 254, 106);
+}
